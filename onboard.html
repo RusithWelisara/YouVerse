@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onboarding - YouVerse</title>
+    <meta name="description" content="Get started with YouVerse - Create your AI-powered digital identity">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/onboard.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header id="header" class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="index.html" class="logo">
+                    <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon points="13,2 3,14 12,14 11,22 21,10 12,10 13,2"></polygon>
+                    </svg>
+                    <span class="logo-text">YouVerse</span>
+                </a>
+                
+                <div class="nav-links">
+                    <a href="index.html#features" class="nav-link">Features</a>
+                    <a href="index.html#dashboard" class="nav-link">Dashboard</a>
+                    <a href="onboard.html" class="nav-link active">Onboarding</a>
+                    <a href="partners.html" class="nav-link">Partners</a>
+                </div>
+                
+                <button class="btn btn-gradient">Get Early Access</button>
+                
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Onboarding Content -->
+    <main class="onboard-main">
+        <div class="container">
+            <div class="onboard-container">
+                <!-- Progress Header -->
+                <div class="onboard-header">
+                    <div class="header-top">
+                        <h1 class="onboard-title">
+                            Welcome to <span class="gradient-text">YouVerse</span>
+                        </h1>
+                        <div class="step-indicator">
+                            Step <span id="currentStep">1</span> of <span id="totalSteps">4</span>
+                        </div>
+                    </div>
+                    
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    
+                    <div class="steps-grid" id="stepsGrid">
+                        <div class="step-item active" data-step="1">
+                            <div class="step-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="12" cy="7" r="4"></circle>
+                                </svg>
+                            </div>
+                            <div class="step-content">
+                                <h3>Personal Information</h3>
+                                <p>Tell us about yourself</p>
+                            </div>
+                        </div>
+                        
+                        <div class="step-item" data-step="2">
+                            <div class="step-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+                                    <circle cx="12" cy="13" r="4"></circle>
+                                </svg>
+                            </div>
+                            <div class="step-content">
+                                <h3>Avatar Customization</h3>
+                                <p>Create your digital identity</p>
+                            </div>
+                        </div>
+                        
+                        <div class="step-item" data-step="3">
+                            <div class="step-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path>
+                                    <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                                    <line x1="12" y1="19" x2="12" y2="22"></line>
+                                </svg>
+                            </div>
+                            <div class="step-content">
+                                <h3>Voice & Personality</h3>
+                                <p>Define your AI characteristics</p>
+                            </div>
+                        </div>
+                        
+                        <div class="step-item" data-step="4">
+                            <div class="step-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                    <polyline points="22,4 12,14.01 9,11.01"></polyline>
+                                </svg>
+                            </div>
+                            <div class="step-content">
+                                <h3>Complete Setup</h3>
+                                <p>Finalize your YouVerse profile</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step Content -->
+                <div class="step-content-card">
+                    <div class="card-header">
+                        <h2 id="stepTitle">Personal Information</h2>
+                        <p id="stepDescription">Tell us about yourself</p>
+                    </div>
+                    
+                    <div class="card-content">
+                        <!-- Step 1: Personal Information -->
+                        <div class="step-form active" id="step1">
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="firstName">First Name</label>
+                                    <input type="text" id="firstName" placeholder="Enter your first name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Last Name</label>
+                                    <input type="text" id="lastName" placeholder="Enter your last name" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" placeholder="Enter your email address" required>
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Avatar Customization -->
+                        <div class="step-form" id="step2">
+                            <div class="avatar-preview">
+                                <div class="current-avatar">
+                                    <img id="selectedAvatar" src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&dpr=2" alt="Selected Avatar">
+                                </div>
+                                <h3>Choose Your Avatar Style</h3>
+                            </div>
+                            
+                            <div class="avatar-grid">
+                                <div class="avatar-option active" data-avatar="professional">
+                                    <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&dpr=2" alt="Professional">
+                                    <span>Professional</span>
+                                </div>
+                                <div class="avatar-option" data-avatar="casual">
+                                    <img src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&dpr=2" alt="Casual">
+                                    <span>Casual</span>
+                                </div>
+                                <div class="avatar-option" data-avatar="creative">
+                                    <img src="https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&dpr=2" alt="Creative">
+                                    <span>Creative</span>
+                                </div>
+                                <div class="avatar-option" data-avatar="futuristic">
+                                    <img src="https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&dpr=2" alt="Futuristic">
+                                    <span>Futuristic</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Voice & Personality -->
+                        <div class="step-form" id="step3">
+                            <div class="form-section">
+                                <label class="section-label">Voice Type</label>
+                                <div class="option-grid">
+                                    <div class="option-card active" data-voice="natural">
+                                        <h4>Natural</h4>
+                                        <p>Warm and conversational</p>
+                                    </div>
+                                    <div class="option-card" data-voice="professional">
+                                        <h4>Professional</h4>
+                                        <p>Clear and authoritative</p>
+                                    </div>
+                                    <div class="option-card" data-voice="energetic">
+                                        <h4>Energetic</h4>
+                                        <p>Upbeat and enthusiastic</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-section">
+                                <label class="section-label">Personality</label>
+                                <div class="option-grid">
+                                    <div class="option-card active" data-personality="friendly">
+                                        <h4>Friendly</h4>
+                                        <p>Approachable and warm</p>
+                                    </div>
+                                    <div class="option-card" data-personality="professional">
+                                        <h4>Professional</h4>
+                                        <p>Focused and efficient</p>
+                                    </div>
+                                    <div class="option-card" data-personality="creative">
+                                        <h4>Creative</h4>
+                                        <p>Innovative and inspiring</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 4: Complete Setup -->
+                        <div class="step-form" id="step4">
+                            <div class="completion-content">
+                                <div class="completion-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                        <polyline points="22,4 12,14.01 9,11.01"></polyline>
+                                    </svg>
+                                </div>
+                                <h3>Almost Ready!</h3>
+                                <p>Your AI clone is being created with your preferences. This may take a few moments.</p>
+                                
+                                <div class="profile-summary">
+                                    <h4>Your Profile Summary</h4>
+                                    <div class="summary-grid">
+                                        <div class="summary-item">
+                                            <span class="label">Name:</span>
+                                            <span class="value" id="summaryName">Alex Parker</span>
+                                        </div>
+                                        <div class="summary-item">
+                                            <span class="label">Email:</span>
+                                            <span class="value" id="summaryEmail">alex@example.com</span>
+                                        </div>
+                                        <div class="summary-item">
+                                            <span class="label">Voice:</span>
+                                            <span class="value" id="summaryVoice">Natural</span>
+                                        </div>
+                                        <div class="summary-item">
+                                            <span class="label">Personality:</span>
+                                            <span class="value" id="summaryPersonality">Friendly</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Navigation -->
+                    <div class="step-navigation">
+                        <button class="btn btn-outline" id="prevBtn" disabled>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M19 12H5M12 19l-7-7 7-7"></path>
+                            </svg>
+                            Previous
+                        </button>
+                        
+                        <button class="btn btn-gradient" id="nextBtn">
+                            <span id="nextBtnText">Next</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/onboard.js"></script>
+</body>
+</html>

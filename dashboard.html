@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - YouVerse</title>
+    <meta name="description" content="Your YouVerse dashboard - Track your AI interactions, earnings, and digital identity">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/dashboard.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header id="header" class="header scrolled">
+        <div class="container">
+            <nav class="nav">
+                <a href="index.html" class="logo">
+                    <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon points="13,2 3,14 12,14 11,22 21,10 12,10 13,2"></polygon>
+                    </svg>
+                    <span class="logo-text">YouVerse</span>
+                </a>
+                
+                <div class="nav-links">
+                    <a href="index.html#features" class="nav-link">Features</a>
+                    <a href="dashboard.html" class="nav-link active">Dashboard</a>
+                    <a href="onboard.html" class="nav-link">Onboarding</a>
+                    <a href="partners.html" class="nav-link">Partners</a>
+                </div>
+                
+                <div class="header-actions">
+                    <button class="btn btn-outline btn-sm">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path>
+                            <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                        </svg>
+                        Notifications
+                    </button>
+                    <button class="btn btn-outline btn-sm">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="3"></circle>
+                            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1 1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                        </svg>
+                        Settings
+                    </button>
+                </div>
+                
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Dashboard Content -->
+    <main class="dashboard-main">
+        <div class="container">
+            <!-- Welcome Header -->
+            <div class="dashboard-header">
+                <div class="welcome-section">
+                    <h1 class="welcome-title">
+                        Welcome back, <span class="gradient-text">Alex</span>
+                    </h1>
+                    <p class="welcome-date" id="currentDate">Loading...</p>
+                </div>
+            </div>
+
+            <!-- Stats Grid -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <h3 class="stat-title">Total Earnings</h3>
+                        <div class="stat-icon stat-icon-green">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="12" y1="1" x2="12" y2="23"></line>
+                                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-value">$12.80</div>
+                        <div class="stat-trend positive">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="23,6 13.5,15.5 8.5,10.5 1,18"></polyline>
+                                <polyline points="17,6 23,6 23,12"></polyline>
+                            </svg>
+                            +20.1% from last month
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <h3 class="stat-title">AI Interactions</h3>
+                        <div class="stat-icon stat-icon-blue">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"></path>
+                                <path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-value">1,247</div>
+                        <div class="stat-trend positive">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                            </svg>
+                            +15.3% from last week
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <h3 class="stat-title">Active Days</h3>
+                        <div class="stat-icon stat-icon-purple">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="16" y1="2" x2="16" y2="6"></line>
+                                <line x1="8" y1="2" x2="8" y2="6"></line>
+                                <line x1="3" y1="10" x2="21" y2="10"></line>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-value">925</div>
+                        <div class="stat-description">Since joining YouVerse</div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <h3 class="stat-title">Clone Status</h3>
+                        <div class="stat-icon stat-icon-yellow">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="13,2 3,14 12,14 11,22 21,10 12,10 13,2"></polygon>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-value status-active">Active</div>
+                        <div class="stat-description">Productizing • Finest</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Content Grid -->
+            <div class="main-content-grid">
+                <!-- Left Column -->
+                <div class="content-left">
+                    <!-- Earnings Chart -->
+                    <div class="chart-card">
+                        <div class="chart-header">
+                            <h3 class="chart-title">Earnings Overview</h3>
+                            <p class="chart-description">Your AI earnings over the past 4 months</p>
+                        </div>
+                        <div class="chart-content">
+                            <canvas id="earningsChart" width="400" height="200"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- Activity Chart -->
+                    <div class="chart-card">
+                        <div class="chart-header">
+                            <h3 class="chart-title">Weekly Activity</h3>
+                            <p class="chart-description">AI interactions and earnings this week</p>
+                        </div>
+                        <div class="chart-content">
+                            <canvas id="activityChart" width="400" height="200"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column -->
+                <div class="content-right">
+                    <!-- Digital ID -->
+                    <div class="info-card">
+                        <div class="card-header">
+                            <h3 class="card-title">Digital ID</h3>
+                        </div>
+                        <div class="card-content">
+                            <div class="profile-section">
+                                <div class="profile-avatar">
+                                    <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&dpr=2" alt="Alex Parker">
+                                </div>
+                                <div class="profile-info">
+                                    <h4 class="profile-name">Alex Parker</h4>
+                                    <p class="profile-email">thisisparker@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="progress-section">
+                                <div class="progress-header">
+                                    <span class="progress-label">Profile Completion</span>
+                                    <span class="progress-value">85%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 85%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- AI Clone Status -->
+                    <div class="info-card">
+                        <div class="card-header">
+                            <h3 class="card-title">AI Clone Status</h3>
+                        </div>
+                        <div class="card-content">
+                            <div class="badges-section">
+                                <span class="badge badge-green">Still</span>
+                                <span class="badge badge-blue">Productizing</span>
+                            </div>
+                            <div class="clone-stats">
+                                <div class="clone-stat">
+                                    <span class="stat-label">Lives</span>
+                                    <span class="stat-value">925d</span>
+                                </div>
+                                <div class="clone-stat">
+                                    <span class="stat-label">Status</span>
+                                    <span class="stat-value status-active">Finest</span>
+                                </div>
+                                <div class="clone-stat">
+                                    <span class="stat-label">Learning Progress</span>
+                                    <span class="stat-value">92%</span>
+                                </div>
+                            </div>
+                            <div class="progress-section">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 92%"></div>
+                                </div>
+                            </div>
+                            <button class="btn btn-outline btn-full">Customize Clone</button>
+                        </div>
+                    </div>
+
+                    <!-- Recent Activity -->
+                    <div class="info-card">
+                        <div class="card-header">
+                            <h3 class="card-title">Recent Activity</h3>
+                        </div>
+                        <div class="card-content">
+                            <div class="activity-list">
+                                <div class="activity-item">
+                                    <div class="activity-indicator activity-success"></div>
+                                    <div class="activity-content">
+                                        <p class="activity-text">AI interaction completed</p>
+                                        <p class="activity-time">2 minutes ago</p>
+                                    </div>
+                                    <div class="activity-value">+$0.15</div>
+                                </div>
+                                
+                                <div class="activity-item">
+                                    <div class="activity-indicator activity-info"></div>
+                                    <div class="activity-content">
+                                        <p class="activity-text">Profile updated</p>
+                                        <p class="activity-time">1 hour ago</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="activity-item">
+                                    <div class="activity-indicator activity-warning"></div>
+                                    <div class="activity-content">
+                                        <p class="activity-text">New milestone reached</p>
+                                        <p class="activity-time">3 hours ago</p>
+                                    </div>
+                                    <div class="activity-value">+$2.50</div>
+                                </div>
+                            </div>
+                            <button class="btn btn-ghost btn-full">View All Activity</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/dashboard.js"></script>
+</body>
+</html>
