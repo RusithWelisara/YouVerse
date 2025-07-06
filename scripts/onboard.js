@@ -228,7 +228,7 @@ class OnboardingFlow {
             1: { title: 'Personal Information', description: 'Tell us about yourself' },
             2: { title: 'Avatar Customization', description: 'Create your digital identity' },
             3: { title: 'Voice & Personality', description: 'Define your AI characteristics' },
-            4: { title: 'Complete Setup', description: 'Finalize your YouVerse profile' }
+            4: { title: 'Complete Setup', description: 'Finalize your DupliVerse profile' }
         };
         
         return steps[step] || steps[1];
@@ -250,7 +250,7 @@ class OnboardingFlow {
             await new Promise(resolve => setTimeout(resolve, 2000));
             
             // Show success message
-            this.showNotification('Welcome to YouVerse! Your AI clone is being created.', 'success');
+            this.showNotification('Welcome to DupliVerse! Your AI clone is being created.', 'success');
             
             // Redirect to dashboard after a delay
             setTimeout(() => {
@@ -318,7 +318,7 @@ class OnboardingFlow {
 
     // Method to save progress to localStorage
     saveProgress() {
-        localStorage.setItem('youverse_onboarding', JSON.stringify({
+        localStorage.setItem('dupliverse_onboarding', JSON.stringify({
             currentStep: this.currentStep,
             formData: this.formData
         }));
@@ -326,7 +326,7 @@ class OnboardingFlow {
 
     // Method to load progress from localStorage
     loadProgress() {
-        const saved = localStorage.getItem('youverse_onboarding');
+        const saved = localStorage.getItem('dupliverse_onboarding');
         if (saved) {
             try {
                 const data = JSON.parse(saved);
@@ -353,7 +353,7 @@ class OnboardingFlow {
 
     // Method to clear saved progress
     clearProgress() {
-        localStorage.removeItem('youverse_onboarding');
+        localStorage.removeItem('dupliverse_onboarding');
     }
 }
 

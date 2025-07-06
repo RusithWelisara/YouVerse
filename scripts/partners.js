@@ -243,7 +243,7 @@ class PartnersPage {
                     </svg>
                 </div>
                 <h3>Application Submitted!</h3>
-                <p>Thank you for your interest in partnering with YouVerse. Our team will review your application and get back to you within 24 hours.</p>
+                <p>Thank you for your interest in partnering with DupliVerse. Our team will review your application and get back to you within 24 hours.</p>
             `;
             
             applicationCard.appendChild(successContent);
@@ -305,8 +305,8 @@ class PartnersPage {
     simulateDownload() {
         // Create a temporary download link
         const link = document.createElement('a');
-        link.href = 'data:text/plain;charset=utf-8,YouVerse Partnership Guide\n\nThank you for your interest in partnering with YouVerse!\n\nThis guide contains information about our partnership program, integration options, and benefits.\n\nFor more information, please contact our partnership team.';
-        link.download = 'youverse-partnership-guide.txt';
+        link.href = 'data:text/plain;charset=utf-8,DupliVerse Partnership Guide\n\nThank you for your interest in partnering with DupliVerse!\n\nThis guide contains information about our partnership program, integration options, and benefits.\n\nFor more information, please contact our partnership team.';
+        link.download = 'dupliverse-partnership-guide.txt';
         link.style.display = 'none';
         
         document.body.appendChild(link);

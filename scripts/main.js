@@ -1,6 +1,6 @@
-// Main JavaScript functionality for YouVerse website
+// Main JavaScript functionality for DupliVerse website
 
-class YouVerseApp {
+class DupliVerseApp {
     constructor() {
         this.init();
     }
@@ -378,9 +378,9 @@ class YouVerseApp {
 }
 
 // Initialize the application
-const app = new YouVerseApp();
+const app = new DupliVerseApp();
 
 // Export for potential module usage
 if (typeof module !== 'undefined' && module.exports) {
-    module.exports = YouVerseApp;
+    module.exports = DupliVerseApp;
 }
