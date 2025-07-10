@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - DupliVerse</title>
+    <meta name="description" content="Manage your DupliVerse account settings and preferences">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/settings.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" href="./images/logo_bg_removed.png" type="png">
+</head>
+<body>
+    <!-- Header -->
+    <header id="header" class="header scrolled">
+        <div class="container">
+            <nav class="nav">
+                <a href="index.html" class="logo">
+                    <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon points="13,2 3,14 12,14 11,22 21,10 12,10 13,2"></polygon>
+                    </svg>
+                    <span class="logo-text">DupliVerse</span>
+                </a>
+
+                <div class="nav-links">
+                    <a href="dashboard.html" class="nav-link">Dashboard</a>
+                    <a href="index.html#features" class="nav-link">Features</a>
+                    <a href="onboard.html" class="nav-link">Onboarding</a>
+                    <a href="partners.html" class="nav-link">Partners</a>
+                </div>
+
+                <div class="header-actions">
+                    <button class="btn btn-outline btn-sm" id="notificationsBtn">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path>
+                            <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                        </svg>
+                        Notifications
+                    </button>
+                    <button class="btn btn-outline btn-sm active">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="3"></circle>
+                            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1 1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                        </svg>
+                        Settings
+                    </button>
+                </div>
+
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Settings Content -->
+    <main class="settings-main">
+        <div class="container">
+            <div class="settings-container">
+                <!-- Settings Sidebar -->
+                <aside class="settings-sidebar">
+                    <div class="sidebar-header">
+                        <h2>Settings</h2>
+                    </div>
+                    
+                    <nav class="settings-nav">
+                        <button class="nav-item active" data-section="profile">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                            Profile
+                        </button>
+                        
+                        <button class="nav-item" data-section="account">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                            Account
+                        </button>
+                        
+                        <button class="nav-item" data-section="preferences">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="3"></circle>
+                                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1 1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                            </svg>
+                            Preferences
+                        </button>
+                        
+                        <button class="nav-item" data-section="notifications">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path>
+                                <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                            </svg>
+                            Notifications
+                        </button>
+                        
+                        <button class="nav-item" data-section="privacy">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"></path>
+                            </svg>
+                            Privacy & Security
+                        </button>
+                        
+                        <button class="nav-item" data-section="billing">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                <line x1="8" y1="21" x2="16" y2="21"></line>
+                                <line x1="12" y1="17" x2="12" y2="21"></line>
+                            </svg>
+                            Billing
+                        </button>
+                    </nav>
+                </aside>
+
+                <!-- Settings Content -->
+                <div class="settings-content">
+                    <!-- Profile Section -->
+                    <section class="settings-section active" id="profileSection">
+                        <div class="section-header">
+                            <h3>Profile Information</h3>
+                            <p>Update your personal information and profile picture</p>
+                        </div>
+
+                        <div class="settings-card">
+                            <form class="settings-form" id="profileForm">
+                                <!-- Profile Picture -->
+                                <div class="profile-picture-section">
+                                    <div class="profile-picture">
+                                        <img id="profileImage" src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&dpr=2" alt="Profile Picture">
+                                        <div class="picture-overlay">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+                                                <circle cx="12" cy="13" r="4"></circle>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="picture-actions">
+                                        <input type="file" id="profilePictureInput" accept="image/*" style="display: none;">
+                                        <button type="button" class="btn btn-outline btn-sm" id="uploadPictureBtn">
+                                            Upload Photo
+                                        </button>
+                                        <button type="button" class="btn btn-ghost btn-sm" id="removePictureBtn">
+                                            Remove
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Personal Information -->
+                                <div class="form-grid">
+                                    <div class="form-group">
+                                        <label for="profileFirstName">First Name</label>
+                                        <input type="text" id="profileFirstName" name="firstName" value="Alex" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="profileLastName">Last Name</label>
+                                        <input type="text" id="profileLastName" name="lastName" value="Parker" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="profileEmail">Email Address</label>
+                                    <input type="email" id="profileEmail" name="email" value="thisisparker@gmail.com" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="profilePhone">Phone Number</label>
+                                    <input type="tel" id="profilePhone" name="phone" value="+1 (555) 123-4567">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="profileBio">Bio</label>
+                                    <textarea id="profileBio" name="bio" rows="4" placeholder="Tell us about yourself...">AI enthusiast and digital transformation advocate. Building the future of human-AI collaboration.</textarea>
+                                </div>
+
+                                <div class="form-actions">
+                                    <button type="button" class="btn btn-outline" id="cancelProfileBtn">Cancel</button>
+                                    <button type="submit" class="btn btn-gradient" id="saveProfileBtn">
+                                        <span class="btn-text">Save Changes</span>
+                                        <div class="btn-loading" style="display: none;">
+                                            <div class="loading-spinner"></div>
+                                            Saving...
+                                        </div>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </section>
+
+                    <!-- Account Section -->
+                    <section class="settings-section" id="accountSection">
+                        <div class="section-header">
+                            <h3>Account Settings</h3>
+                            <p>Manage your account security and login preferences</p>
+                        </div>
+
+                        <!-- Change Password -->
+                        <div class="settings-card">
+                            <h4>Change Password</h4>
+                            <form class="settings-form" id="passwordForm">
+                                <div class="form-group">
+                                    <label for="currentPassword">Current Password</label>
+                                    <input type="password" id="currentPassword" name="currentPassword" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="newPassword">New Password</label>
+                                    <input type="password" id="newPassword" name="newPassword" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="confirmNewPassword">Confirm New Password</label>
+                                    <input type="password" id="confirmNewPassword" name="confirmNewPassword" required>
+                                </div>
+                                <div class="form-actions">
+                                    <button type="submit" class="btn btn-gradient">Update Password</button>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- Two-Factor Authentication -->
+                        <div class="settings-card">
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <h4>Two-Factor Authentication</h4>
+                                    <p>Add an extra layer of security to your account</p>
+                                </div>
+                                <div class="setting-control">
+                                    <label class="toggle-switch">
+                                        <input type="checkbox" id="twoFactorToggle">
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Account Deletion -->
+                        <div class="settings-card danger-zone">
+                            <h4>Danger Zone</h4>
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <h5>Delete Account</h5>
+                                    <p>Permanently delete your account and all associated data</p>
+                                </div>
+                                <div class="setting-control">
+                                    <button class="btn btn-danger" id="deleteAccountBtn">Delete Account</button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Preferences Section -->
+                    <section class="settings-section" id="preferencesSection">
+                        <div class="section-header">
+                            <h3>Preferences</h3>
+                            <p>Customize your DupliVerse experience</p>
+                        </div>
+
+                        <!-- Theme Settings -->
+                        <div class="settings-card">
+                            <h4>Appearance</h4>
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <h5>Theme</h5>
+                                    <p>Choose your preferred color scheme</p>
+                                </div>
+                                <div class="setting-control">
+                                    <div class="theme-selector">
+                                        <button class="theme-option active" data-theme="dark">
+                                            <div class="theme-preview dark"></div>
+                                            <span>Dark</span>
+                                        </button>
+                                        <button class="theme-option" data-theme="light">
+                                            <div class="theme-preview light"></div>
+                                            <span>Light</span>
+                                        </button>
+                                        <button class="theme-option" data-theme="system">
+                                            <div class="theme-preview system"></div>
+                                            <span>System</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Language Settings -->
+                        <div class="settings-card">
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <h4>Language</h4>
+                                    <p>Select your preferred language</p>
+                                </div>
+                                <div class="setting-control">
+                                    <select id="languageSelect" class="form-select">
+                                        <option value="en" selected>English</option>
+                                        <option value="es">Español</option>
+                                        <option value="fr">Français</option>
+                                        <option value="de">Deutsch</option>
+                                        <option value="ja">日本語</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Timezone Settings -->
+                        <div class="settings-card">
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <h4>Timezone</h4>
+                                    <p>Set your local timezone</p>
+                                </div>
+                                <div class="setting-control">
+                                    <select id="timezoneSelect" class="form-select">
+                                        <option value="UTC-8" selected>Pacific Time (UTC-8)</option>
+                                        <option value="UTC-5">Eastern Time (UTC-5)</option>
+                                        <option value="UTC+0">Greenwich Mean Time (UTC+0)</option>
+                                        <option value="UTC+1">Central European Time (UTC+1)</option>
+                                        <option value="UTC+9">Japan Standard Time (UTC+9)</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Notifications Section -->
+                    <section class="settings-section" id="notificationsSection">
+                        <div class="section-header">
+                            <h3>Notification Settings</h3>
+                            <p>Control how and when you receive notifications</p>
+                        </div>
+
+                        <!-- Email Notifications -->
+                        <div class="settings-card">
+                            <h4>Email Notifications</h4>
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <h5>Account Activity</h5>
+                                    <p>Receive emails about account security and important updates</p>
+                                </div>
+                                <div class="setting-control">
+                                    <label class="toggle-switch">
+                                        <input type="checkbox" id="emailAccountToggle" checked>
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <h5>AI Clone Updates</h5>
+                                    <p>Get notified about your AI clone's progress and achievements</p>
+                                </div>
+                                <div class="setting-control">
+                                    <label class="toggle-switch">
+                                        <input type="checkbox" id="emailCloneToggle" checked>
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <h5>Marketing</h5>
+                                    <p>Receive promotional emails and product updates</p>
+                                </div>
+                                <div class="setting-control">
+                                    <label class="toggle-switch">
+                                        <input type="checkbox" id="emailMarketingToggle">
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Push Notifications -->
+                        <div class="settings-card">
+                            <h4>Push Notifications</h4>
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <h5>Browser Notifications</h5>
+                                    <p>Receive notifications in your browser</p>
+                                </div>
+                                <div class="setting-control">
+                                    <label class="toggle-switch">
+                                        <input type="checkbox" id="pushBrowserToggle" checked>
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <h5>Mobile Notifications</h5>
+                                    <p>Receive notifications on your mobile device</p>
+                                </div>
+                                <div class="setting-control">
+                                    <label class="toggle-switch">
+                                        <input type="checkbox" id="pushMobileToggle" checked>
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Privacy Section -->
+                    <section class="settings-section" id="privacySection">
+                        <div class="section-header">
+                            <h3>Privacy & Security</h3>
+                            <p>Manage your privacy settings and data preferences</p>
+                        </div>
+
+                        <!-- Profile Visibility -->
+                        <div class="settings-card">
+                            <h4>Profile Visibility</h4>
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <h5>Public Profile</h5>
+                                    <p>Make your profile visible to other users</p>
+                                </div>
+                                <div class="setting-control">
+                                    <label class="toggle-switch">
+                                        <input type="checkbox" id="publicProfileToggle" checked>
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <h5>Show Email</h5>
+                                    <p>Display your email address on your public profile</p>
+                                </div>
+                                <div class="setting-control">
+                                    <label class="toggle-switch">
+                                        <input type="checkbox" id="showEmailToggle">
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Data Collection -->
+                        <div class="settings-card">
+                            <h4>Data Collection</h4>
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <h5>Analytics</h5>
+                                    <p>Allow us to collect anonymous usage data to improve our services</p>
+                                </div>
+                                <div class="setting-control">
+                                    <label class="toggle-switch">
+                                        <input type="checkbox" id="analyticsToggle" checked>
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <h5>Personalization</h5>
+                                    <p>Use your data to personalize your experience</p>
+                                </div>
+                                <div class="setting-control">
+                                    <label class="toggle-switch">
+                                        <input type="checkbox" id="personalizationToggle" checked>
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Data Export -->
+                        <div class="settings-card">
+                            <h4>Data Management</h4>
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <h5>Export Data</h5>
+                                    <p>Download a copy of your data</p>
+                                </div>
+                                <div class="setting-control">
+                                    <button class="btn btn-outline" id="exportDataBtn">Export Data</button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Billing Section -->
+                    <section class="settings-section" id="billingSection">
+                        <div class="section-header">
+                            <h3>Billing & Subscription</h3>
+                            <p>Manage your subscription and billing information</p>
+                        </div>
+
+                        <!-- Current Plan -->
+                        <div class="settings-card">
+                            <h4>Current Plan</h4>
+                            <div class="plan-info">
+                                <div class="plan-details">
+                                    <h5>Premium Plan</h5>
+                                    <p>$29.99/month • Billed monthly</p>
+                                    <span class="plan-status active">Active</span>
+                                </div>
+                                <div class="plan-actions">
+                                    <button class="btn btn-outline">Change Plan</button>
+                                    <button class="btn btn-ghost">Cancel Subscription</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Payment Method -->
+                        <div class="settings-card">
+                            <h4>Payment Method</h4>
+                            <div class="payment-method">
+                                <div class="payment-info">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                                        <line x1="1" y1="10" x2="23" y2="10"></line>
+                                    </svg>
+                                    <div>
+                                        <p>•••• •••• •••• 4242</p>
+                                        <span>Expires 12/25</span>
+                                    </div>
+                                </div>
+                                <button class="btn btn-outline btn-sm">Update</button>
+                            </div>
+                        </div>
+
+                        <!-- Billing History -->
+                        <div class="settings-card">
+                            <h4>Billing History</h4>
+                            <div class="billing-history">
+                                <div class="billing-item">
+                                    <div class="billing-info">
+                                        <p>Premium Plan</p>
+                                        <span>Dec 1, 2024</span>
+                                    </div>
+                                    <div class="billing-amount">$29.99</div>
+                                    <button class="btn btn-ghost btn-sm">Download</button>
+                                </div>
+                                <div class="billing-item">
+                                    <div class="billing-info">
+                                        <p>Premium Plan</p>
+                                        <span>Nov 1, 2024</span>
+                                    </div>
+                                    <div class="billing-amount">$29.99</div>
+                                    <button class="btn btn-ghost btn-sm">Download</button>
+                                </div>
+                                <div class="billing-item">
+                                    <div class="billing-info">
+                                        <p>Premium Plan</p>
+                                        <span>Oct 1, 2024</span>
+                                    </div>
+                                    <div class="billing-amount">$29.99</div>
+                                    <button class="btn btn-ghost btn-sm">Download</button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/settings.js"></script>
+</body>
+</html>

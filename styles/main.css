@@ -244,6 +244,18 @@ body {
     }
 }
 
+.header-actions {
+    display: none;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .header-actions {
+        display: flex;
+    }
+}
+
 .nav-link {
     color: var(--text-secondary);
     text-decoration: none;
@@ -269,6 +281,10 @@ body {
 
 .nav-link:hover::after {
     width: 100%;
+}
+
+.nav-link.active {
+    color: var(--primary-blue);
 }
 
 .mobile-menu-btn {
@@ -858,6 +874,17 @@ body {
     color: var(--primary-green);
 }
 
+.earnings-link {
+    color: var(--primary-blue);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.earnings-link:hover {
+    color: var(--primary-purple);
+}
+
 /* Newsletter Section */
 .newsletter {
     padding: 5rem 0;
@@ -1152,7 +1179,7 @@ body {
 
 /* Responsive Design */
 @media (max-width: 767px) {
-    .nav .btn {
+    .header-actions {
         display: none;
     }
     

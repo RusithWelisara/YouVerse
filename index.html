@@ -30,13 +30,16 @@
                 </a>
 
                 <div class="nav-links">
-                    <a href="#dashboard" class="nav-link">Dashboard</a>
+                    <a href="dashboard.html" class="nav-link">Dashboard</a>
                     <a href="#features" class="nav-link">Features</a>
                     <a href="onboard.html" class="nav-link">Onboarding</a>
                     <a href="partners.html" class="nav-link">Partners</a>
                 </div>
 
-                <button class="btn btn-gradient">Get Early Access</button>
+                <div class="header-actions">
+                    <a href="auth.html" class="btn btn-outline">Sign In</a>
+                    <button class="btn btn-gradient">Get Early Access</button>
+                </div>
 
                 <button class="mobile-menu-btn" id="mobileMenuBtn">
                     <span></span>
@@ -46,10 +49,11 @@
             </nav>
 
             <div class="mobile-menu" id="mobileMenu">
+                <a href="dashboard.html" class="mobile-nav-link">Dashboard</a>
                 <a href="#features" class="mobile-nav-link">Features</a>
-                <a href="#dashboard" class="mobile-nav-link">Dashboard</a>
                 <a href="onboard.html" class="mobile-nav-link">Onboarding</a>
                 <a href="partners.html" class="mobile-nav-link">Partners</a>
+                <a href="auth.html" class="btn btn-outline">Sign In</a>
                 <button class="btn btn-gradient">Get Early Access</button>
             </div>
         </div>
@@ -118,7 +122,7 @@
     </section>
 
     <!-- Dashboard Preview Section -->
-    <section id="dashboard" class="dashboard-preview">
+    <section class="dashboard-preview">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">
@@ -188,7 +192,7 @@
                                 <polyline points="23,6 13.5,15.5 8.5,10.5 1,18"></polyline>
                                 <polyline points="17,6 23,6 23,12"></polyline>
                             </svg>
-                            <span>View more</span>
+                            <a href="dashboard.html" class="earnings-link">View Dashboard</a>
                         </div>
                     </div>
                 </div>
@@ -399,6 +403,7 @@
     </footer>
 
     <script src="scripts/main.js"></script>
+    <script src="scripts/enhanced-main.js"></script>
 </body>
 
 </html>
