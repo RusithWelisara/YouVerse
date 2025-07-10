@@ -8,10 +8,19 @@ channel = "stable-24_05"
 run = ["sh", "-c", "npm run start"]
 
 [workflows]
-runButton = "Start Development Server"
+runButton = "Start Next.js Dev Server"
 
 [[workflows.workflow]]
 name = "Start Development Server"
+author = 43837959
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "npm run dev"
+
+[[workflows.workflow]]
+name = "Start Next.js Dev Server"
 author = 43837959
 mode = "sequential"
 
