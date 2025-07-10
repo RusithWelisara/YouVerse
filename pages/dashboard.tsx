@@ -1,10 +1,10 @@
-
 'use client'
 
 import { useUser, useWallet } from '../hooks/useUser'
 import AuthButton from '../components/auth/AuthButton'
 import SyncStatus from '../components/SyncStatus'
 import LoadingSpinner from '../components/LoadingSpinner'
+import DebugProfile from '../components/DebugProfile'
 
 export default function Dashboard() {
   const { user, profile, isLoading, isHydrated, updateProfile } = useUser()
@@ -76,7 +76,7 @@ export default function Dashboard() {
       <main className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
         <div className="px-4 py-6 sm:px-0">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            
+
             {/* User Info Card */}
             <div className="bg-white overflow-hidden shadow rounded-lg">
               <div className="p-6">
@@ -138,7 +138,7 @@ export default function Dashboard() {
                 </div>
               </div>
             </div>
-
+            <DebugProfile/>
           </div>
         </div>
       </main>

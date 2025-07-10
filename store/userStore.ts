@@ -81,10 +81,19 @@ const useUserStore = create<UserStore>()(
 
         updateProfile: async (updates) => {
           const { user, profile } = get()
-          if (!user?.id || !profile) return
+          if (!user?.id) {
+            console.error('No authenticated user found')
+            throw new Error('User not authenticated')
+          }
+          
+          if (!profile) {
+            console.error('No profile found')
+            throw new Error('Profile not found')
+          }
 
           try {
             set({ isLoading: true })
+            console.log('Updating profile with:', updates)
 
             // Optimistic update
             const optimisticProfile = { ...profile, ...updates }
@@ -100,13 +109,24 @@ const useUserStore = create<UserStore>()(
             if (error) {
               // Revert optimistic update on error
               set({ profile })
-              console.error('Error updating profile:', error)
-              throw error
+              console.error('Supabase error updating profile:', error)
+              
+              // Provide more specific error messages
+              if (error.code === 'PGRST301') {
+                throw new Error('Profile not found or no permission to update')
+              } else if (error.code === 'PGRST204') {
+                throw new Error('No data returned from update')
+              } else {
+                throw new Error(`Database error: ${error.message}`)
+              }
             } else {
+              console.log('Profile updated successfully:', data)
               set({ profile: data })
             }
           } catch (error) {
             console.error('Unexpected error updating profile:', error)
+            // Revert optimistic update on any error
+            set({ profile })
             throw error
           } finally {
             set({ isLoading: false })
